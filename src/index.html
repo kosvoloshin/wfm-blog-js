@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="header">
+        <h1 class="title">blog</h1>
+        <h2 class="subtitle">create posts</h2>
+        <button class="button get-started js-header-start">start</button>
+    </header>
+    <section class="container w-container">
+        <ul class="tabs" id="navigation">
+            <li>
+                <a href="#" class="tab" data-name="posts">posts</a>
+            </li>
+            <li>
+                <a href="#" class="tab active" data-name="create">create</a>
+            </li>
+            <li>
+                <a href="#" class="tab" data-name="favorite">favorites</a>
+            </li>
+        </ul>
+        <div class="loader-wrap hide" id="loader">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+        <form id="create">
+            <h1 class="h4">create new post</h1>
+            <div class="form-control">
+                <label>name</label>
+                <input type="text" name="title" placeholder="enter name">
+            </div>
+            <div class="form-control">
+                <label>text</label>
+                <textarea name="fulltext" placeholder="enter text"></textarea>
+            </div>
+            <div class="form-control">
+                <label>type</label>
+                <select name="type">
+                    <option value="note" selected>note</option>
+                    <option value="news">news</option>
+                </select>
+            </div>
+            <button type="submit" class="button">create</button>
+        </form>
+        <div id="posts" class="hide"></div>
+        <div id="favorite" class="hide"></div>
+    </section>
+</body>
+</html>
